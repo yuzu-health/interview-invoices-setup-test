@@ -1,0 +1,23 @@
+node_modules/
+.DS_Store
+*.pem
+*.tsbuildinfo
+npm-debug.log*
+.env*
+
+# sqlite dbs (regenerated via seed)
+*.db
+*.db-shm
+*.db-wal
+
+# generated prisma client
+**/src/generated/
+
+# frontend build output
+frontend/dist/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

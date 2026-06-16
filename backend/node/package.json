@@ -1,0 +1,31 @@
+{
+  "name": "preflight-backend-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "postinstall": "prisma generate",
+    "seed": "DATABASE_URL=file:./dev.db prisma migrate deploy && tsx prisma/seed.ts",
+    "test": "vitest run"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.3",
+    "@prisma/adapter-libsql": "^7.8.0",
+    "@prisma/client": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "prisma": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20",
+    "tsx": "^4.22.4",
+    "typescript": "^5",
+    "vitest": "^2.0.0"
+  }
+}

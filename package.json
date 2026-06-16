@@ -1,0 +1,16 @@
+{
+  "name": "invoicing-preflight",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:node": "concurrently \"cd backend/node && npm run dev\" \"cd frontend && npm run dev\"",
+    "dev:python": "concurrently \"cd backend/python && python3 main.py\" \"cd frontend && npm run dev\"",
+    "seed:node": "cd backend/node && npm run seed",
+    "seed:python": "cd backend/python && python3 seed.py",
+    "test:node": "cd backend/node && npm test",
+    "test:python": "cd backend/python && python3 -m pytest test_widget.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
