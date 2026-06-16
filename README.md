@@ -11,6 +11,16 @@ generation, ports) before the interview starts.
 
 Pick **one** backend. All commands run from the repo root.
 
+## Frontend setup
+
+The frontend is a separate Vite/React app with its own dependencies, so it needs
+its own install regardless of which backend you pick:
+
+- **Do** run `npm install --prefix frontend` (or `cd frontend && npm install`) —
+  this is included in the steps below.
+- **Don't** install Vite globally (`npm i -g vite`) — Vite is a local dependency
+  of `frontend/`, and `npm run dev:*` uses that local copy.
+
 ## Node
 
 ```bash
